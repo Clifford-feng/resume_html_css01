@@ -1,0 +1,256 @@
+
+.title {
+  font-size: 3rem;
+}
+
+.myStyle h1 {
+  font-size: 4.5rem;
+}
+
+.myStyle h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.myStyle h3 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.myStyle h4 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.myStyle h5 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.myStyle h6 {
+  font-size: 1.5rem;
+}
+
+.mySpan {
+  /* 外间距 */
+  /* margin: 100px; */
+  margin: 5px 10px;
+  /* 内间距 */
+  padding: 5px 10px;
+  /* 字体颜色 */
+  color: #fff;
+  /* 背景颜色 */
+  background-color: #13c2c2;
+  background: linear-gradient(to right bottom, #13c2c2, #1379c2);
+  /* 圆角处理 */
+  border-radius: 20px;
+  /* 鼠标手样式 */
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  
+}
+
+header a {
+  text-decoration: none;
+}
+
+header img.headphoto {
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  border-radius: 50%;
+}
+
+section.mySection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mySection p {
+  max-width: 800px;
+  text-align: justify;
+  @media (width < 798px){
+    font-size:
+  }
+}
+
+.toTop a {
+  text-decoration: none;
+}
+
+.toTop span {
+  position: fixed;
+  right: 0;
+  top: 100px;
+  width: 60px;
+  height: 100px;
+  display: grid;
+  place-items: center;
+  background-color: #188fff84;
+  border-radius: 10px 0px 0px 10px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.html::selection {
+  background-color: red;
+  color: white;
+}
+
+.css::selection {
+  background-color: blue;
+  color: white;
+}
+
+.javascript::selection {
+  background-color: black;
+  color: gold;
+}
+
+video {
+  margin-top: 30px;
+  width: 800px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px;
+}
+
+audio {
+  width: 800px;
+  margin-top: 20px;
+  height: 20px;
+  border-radius: 50px;
+  box-shadow: 0px 0px 5px;
+}
+
+.background {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to right bottom, white, #b5f5ec 100%);
+}
+
+
+/* iPad 适配 (屏幕宽度小于 798px) */
+@media (max-width: 798px) {
+  body {
+    font-size: calc(12px + 1vw);
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  header img.headphoto {
+    width: 40px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .mySpan {
+    font-size: calc(12px + 0.3vw); /* 调整字体大小 */
+    margin: calc(5px + 0.2vw) calc(5px + 0.3vw); /* 动态外间距 (上下 左右) */
+    padding: calc(4px + 0.2vw) calc(6px + 0.3vw); /* 动态内间距 (上下 左右) */
+  }
+
+  video {
+    width: 100%; /* 自适应宽度 */
+  }
+
+  section.mySection {
+    padding: 0 10px;
+  }
+
+  .mySection p {
+    max-width: 100%;
+    font-size: calc(10px + 0.8vw);
+    line-height: calc(15px + 0.5vw);
+    margin: calc(8px + 0.2vw) 0;
+    padding: calc(4px + 0.2vw) calc(6px + 0.2vw);
+  }
+
+  .mySection h1, .mySection h2, .mySection h3, .mySection h4 {
+    font-size: calc(18px + 0.6vw);
+}
+
+  .toTop span {
+    width: 50px;
+    height: 50px;
+    font-size: calc(10px + 0.8vw);
+  }
+}
+
+/* 手机适配 (屏幕宽度小于 480px) */
+@media (max-width: 480px) {
+  body {
+    font-size: calc(10px + 0.5vw);
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  header img.headphoto {
+    width: 30px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .mySpan {
+    font-size: calc(8px + 0.3vw); /* 调整字体大小 */
+    margin: calc(3px + 0.2vw) calc(3px + 0.3vw); /* 动态外间距 (上下 左右) */
+    padding: calc(3px + 0.2vw) calc(3px + 0.3vw); /* 动态内间距 (上下 左右) */
+  }
+
+  video {
+    width: 100%; /* 自适应宽度 */
+    margin-top: 20px;
+  }
+
+  section.mySection {
+    padding: 0 5px;
+  }
+
+  .mySection p {
+    max-width: 100%;
+    font-size: calc(8px + 0.5vw);
+    line-height: calc(10px + 0.4vw);
+    margin: calc(6px + 0.2vw) 0;
+    padding: calc(3px + 0.1vw) calc(4px + 0.2vw);
+  }
+
+  .mySection h1, .mySection h2, .mySection h3, .mySection h4 {
+    font-size: calc(12px + 0.4vw);
+}
+
+  
+
+  .toTop span {
+    width: 40px;
+    height: 40px;
+    font-size: calc(8px + 0.5vw);
+  }
+}
